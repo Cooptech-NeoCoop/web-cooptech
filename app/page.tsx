@@ -14,6 +14,7 @@ import {
   Zap,
 } from "lucide-react"
 import Link from "next/link"
+import './page.css'
 import Navbar from "@/components/navbar"
 
 export default function Home() {
@@ -21,23 +22,25 @@ export default function Home() {
     <div className="min-h-screen bg-gradient-to-b from-green-50 to-white">
       <Navbar />
       <main className="container mx-auto px-4 py-12">
-        <section className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-green-800 mb-6">Bienvenido a Cooptech</h1>
-          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            La plataforma que conecta agricultores, operadores logísticos y compradores en un ecosistema integral de
-            comercio agrícola con tecnología blockchain y contratos inteligentes.
-          </p>
-          <div className="flex flex-wrap gap-4 justify-center">
-            <Button asChild size="lg" className="bg-green-600 hover:bg-green-700">
-              <Link href="/marketplace">Comenzar ahora</Link>
-            </Button>
-            <Button asChild size="lg" variant="outline">
-              <Link href="/about">Conocer más</Link>
-            </Button>
-          </div>
-        </section>
+        <div className="holi">
+          <section className="text-center" >
+            <h1 className="text-4xl md:text-6xl font-bold mb-6" style={{color: "white"}}>Bienvenido a Cooptech</h1>
+            <p className="text-xl mb-8 max-w-3xl mx-auto" style={{color: "white"}}>
+              Ecosistema Neo Cooperativo: Transformando la Agroexportación Peruana.
+            </p>
+            <div className="flex flex-wrap gap-4 justify-center">
+              <Button asChild size="lg" className="bg-green-600 hover:bg-green-700">
+                <Link href="/marketplace">Comenzar ahora</Link>
+              </Button>
+              {/* <Button asChild size="lg" variant="outline">
+                <Link href="/about">Conocer más</Link>
+              </Button> */}
+            </div>
+          </section>
+        </div>
+        <br/>
 
-        <section className="grid md:grid-cols-3 gap-8 mb-16">
+        <section className="grid md:grid-cols-2 gap-8 mb-16">
           <Card className="text-center p-6">
             <CardContent className="pt-6">
               <div className="mb-4 flex justify-center">
@@ -54,25 +57,11 @@ export default function Home() {
           <Card className="text-center p-6">
             <CardContent className="pt-6">
               <div className="mb-4 flex justify-center">
-                <Truck className="h-12 w-12 text-green-600" />
-              </div>
-              <h2 className="text-2xl font-semibold mb-4">Operadores Logísticos</h2>
-              <p className="text-gray-600">
-                Ofrece servicios de transporte y distribución. Conecta con agricultores y compradores que necesitan tus
-                servicios. Optimiza rutas y reduce costos operativos.
-              </p>
-            </CardContent>
-          </Card>
-
-          <Card className="text-center p-6">
-            <CardContent className="pt-6">
-              <div className="mb-4 flex justify-center">
                 <ShoppingBag className="h-12 w-12 text-green-600" />
               </div>
               <h2 className="text-2xl font-semibold mb-4">Agroexportadores</h2>
               <p className="text-gray-600">
-                Encuentra productos frescos de calidad certificada. Visualiza en tiempo real la oferta disponible y
-                contrata directamente mediante smart contracts que garantizan cumplimiento.
+                Encuentra productos frescos de calidad certificada. Cuenta con la trazabilidad de tus transacciones y obtén un margen del 15-20% más de ganancia.
               </p>
             </CardContent>
           </Card>
@@ -88,14 +77,14 @@ export default function Home() {
               <h2 className="text-4xl font-extrabold">REVOLUCIONAMOS LA AGROEXPORTACIÓN</h2>
               <div className="h-1 w-16 bg-yellow-400 ml-4"></div>
             </div>
-
-            <p className="text-xl mb-10 max-w-3xl mx-auto text-center font-light">
+            <p className="text-xl mb-1 max-w-3xl mx-auto text-center font-light">
               <span className="font-semibold text-yellow-300">¿Sabías que</span> la cadena de suministro agrícola
               tradicional está dejando a los exportadores peruanos fuera de la competencia global?{" "}
               <span className="font-semibold text-yellow-300">Cooptech cambia las reglas del juego.</span>
             </p>
+            <p className="text-xl mb-1 max-w-3xl mx-auto text-center font-light">Detrás de cada cosecha, un sueño que cultivamos juntos. Empoderamos a los agricultores y transformamos las vidas rurales con IA, blockchain e inclusión financiera, a través de WhatsApp, sin barreras tecnológicas.</p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+            {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
               <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg flex flex-col items-center text-center transform transition-all duration-300 hover:scale-105 hover:bg-white/20 group">
                 <div className="text-5xl font-bold mb-2 text-yellow-300 group-hover:text-white transition-colors">
                   65%
@@ -160,7 +149,7 @@ export default function Home() {
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Link>
               </Button>
-            </div>
+            </div>*/}
           </div>
 
           <div className="absolute bottom-0 right-0">
@@ -172,18 +161,18 @@ export default function Home() {
           <div className="text-center mb-12">
             <h2 className="text-4xl font-extrabold text-green-800 mb-4">SOLUCIONES REVOLUCIONARIAS</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Transformamos cada eslabón de la cadena agroexportadora con tecnología de vanguardia
+              Somos un ecosistema agroexportador peruano digital, transparente y sostenible que te conecta directamente a agricultores, asegurando calidad, trazabilidad, inclusión financiera y prosperidad para ambos.
             </p>
           </div>
 
           {/* Marketplace Digital */}
-          <div className="bg-white rounded-xl shadow-md overflow-hidden mb-10 transform transition-all duration-300 hover:shadow-xl">
+          <div className="bg-white rounded-xl shadow-md overflow-hidden mb-1 transform transition-all duration-200 hover:shadow-xl">
             <div className="p-8">
               <div className="flex items-center mb-4">
                 <BarChart3 className="h-8 w-8 text-green-600 mr-4" />
-                <h3 className="text-2xl font-bold">Marketplace Digital con Contratos Inteligentes</h3>
+                <h3 className="text-2xl font-bold">Embajadores y validación local</h3>
               </div>
-              <div className="grid md:grid-cols-2 gap-6">
+              {/* <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-green-50 p-6 rounded-lg hover:bg-green-100 transition-colors">
                   <h4 className="font-semibold text-lg mb-2">Para Agroexportadores</h4>
                   <p className="text-gray-700">
@@ -199,18 +188,18 @@ export default function Home() {
                     40-55% del valor final del producto.
                   </p>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
 
           {/* Certificación Integral */}
-          <div className="bg-white rounded-xl shadow-md overflow-hidden mb-10 transform transition-all duration-300 hover:shadow-xl">
+          <div className="bg-white rounded-xl shadow-md overflow-hidden mb-1 transform transition-all duration-300 hover:shadow-xl">
             <div className="p-8">
               <div className="flex items-center mb-4">
                 <Shield className="h-8 w-8 text-green-600 mr-4" />
-                <h3 className="text-2xl font-bold">Programa de Certificación Integral</h3>
+                <h3 className="text-2xl font-bold">Tecnología y gobernanza de DAO</h3>
               </div>
-              <div className="grid md:grid-cols-2 gap-6">
+              {/* <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-green-50 p-6 rounded-lg hover:bg-green-100 transition-colors">
                   <h4 className="font-semibold text-lg mb-2">Para Agroexportadores</h4>
                   <p className="text-gray-700">
@@ -225,18 +214,18 @@ export default function Home() {
                     acompañamiento de "agricultores mentores" para alcanzar estándares de exportación.
                   </p>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
 
           {/* Planificación Predictiva */}
-          <div className="bg-white rounded-xl shadow-md overflow-hidden mb-10 transform transition-all duration-300 hover:shadow-xl">
+          <div className="bg-white rounded-xl shadow-md overflow-hidden mb-1 transform transition-all duration-300 hover:shadow-xl">
             <div className="p-8">
               <div className="flex items-center mb-4">
                 <Brain className="h-8 w-8 text-green-600 mr-4" />
-                <h3 className="text-2xl font-bold">Planificación Predictiva con IA</h3>
+                <h3 className="text-2xl font-bold">Al predictivo</h3>
               </div>
-              <div className="grid md:grid-cols-2 gap-6">
+              {/* <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-green-50 p-6 rounded-lg hover:bg-green-100 transition-colors">
                   <h4 className="font-semibold text-lg mb-2">Para Agroexportadores</h4>
                   <p className="text-gray-700">
@@ -251,18 +240,18 @@ export default function Home() {
                     precios proyectados, mejorando toma de decisiones.
                   </p>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
 
           {/* Sistema Financiero */}
-          <div className="bg-white rounded-xl shadow-md overflow-hidden mb-10 transform transition-all duration-300 hover:shadow-xl">
+          <div className="bg-white rounded-xl shadow-md overflow-hidden mb-1 transform transition-all duration-300 hover:shadow-xl">
             <div className="p-8">
               <div className="flex items-center mb-4">
                 <Coins className="h-8 w-8 text-green-600 mr-4" />
-                <h3 className="text-2xl font-bold">Sistema Financiero Integrado</h3>
+                <h3 className="text-2xl font-bold">Sistema DeFi</h3>
               </div>
-              <div className="grid md:grid-cols-2 gap-6">
+              {/* <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-green-50 p-6 rounded-lg hover:bg-green-100 transition-colors">
                   <h4 className="font-semibold text-lg mb-2">Para Agroexportadores</h4>
                   <p className="text-gray-700">
@@ -277,12 +266,12 @@ export default function Home() {
                     respaldados por contratos de venta futuros.
                   </p>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
 
           {/* Logística Coordinada */}
-          <div className="bg-white rounded-xl shadow-md overflow-hidden mb-10 transform transition-all duration-300 hover:shadow-xl">
+          {/* <div className="bg-white rounded-xl shadow-md overflow-hidden mb-10 transform transition-all duration-300 hover:shadow-xl">
             <div className="p-8">
               <div className="flex items-center mb-4">
                 <Truck className="h-8 w-8 text-green-600 mr-4" />
@@ -305,7 +294,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
 
           {/* Trazabilidad Blockchain */}
           <div className="bg-white rounded-xl shadow-md overflow-hidden mb-10 transform transition-all duration-300 hover:shadow-xl">
@@ -314,7 +303,7 @@ export default function Home() {
                 <FileCheck className="h-8 w-8 text-green-600 mr-4" />
                 <h3 className="text-2xl font-bold">Trazabilidad Blockchain</h3>
               </div>
-              <div className="grid md:grid-cols-2 gap-6">
+              {/* <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-green-50 p-6 rounded-lg hover:bg-green-100 transition-colors">
                   <h4 className="font-semibold text-lg mb-2">Para Agroexportadores</h4>
                   <p className="text-gray-700">
@@ -329,7 +318,7 @@ export default function Home() {
                     mercados competitivos.
                   </p>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </section>
@@ -337,7 +326,7 @@ export default function Home() {
         <section className="text-center mb-16 bg-green-50 py-12 rounded-xl">
           <h2 className="text-3xl font-bold text-green-800 mb-6">¿LISTO PARA TRANSFORMAR TU NEGOCIO?</h2>
           <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-            Únete a cientos de agroexportadores y agricultores que ya están revolucionando el comercio agrícola
+            COOPTECH no es solo un negocio, es una misión. Únete a cientos de agroexportadores y agricultores que ya están revolucionando el comercio agrícola
           </p>
           <Button asChild size="lg" className="bg-green-600 hover:bg-green-700 text-lg px-8">
             <Link href="/marketplace">EXPLORAR MARKETPLACE</Link>

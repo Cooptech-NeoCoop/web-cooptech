@@ -1,0 +1,10 @@
+.holi {
+    background-image: url("imagen.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

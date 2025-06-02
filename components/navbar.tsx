@@ -25,7 +25,7 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Navigation */}
-          <NavigationMenu className="hidden md:flex">
+          {/* <NavigationMenu className="hidden md:flex">
             <NavigationMenuList>
               <NavigationMenuItem>
                 <Link href="/marketplace" legacyBehavior passHref>
@@ -43,16 +43,16 @@ export default function Navbar() {
                 </Link>
               </NavigationMenuItem>
             </NavigationMenuList>
-          </NavigationMenu>
+          </NavigationMenu> */}
 
-          <div className="hidden md:flex gap-4">
+          {/* <div className="hidden md:flex gap-4">
             <Button variant="outline" asChild>
               <Link href="/login">Iniciar Sesión</Link>
             </Button>
             <Button className="bg-green-600 hover:bg-green-700" asChild>
               <Link href="/register">Registrarse</Link>
             </Button>
-          </div>
+          </div> */}
 
           {/* Mobile Navigation */}
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
